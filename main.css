@@ -1,0 +1,559 @@
+@charset "UTF-8";
+div#dictionaryWrapper {
+    text-align: left;
+    color: #333;
+    display: none;
+    width: 500px;
+    height: 340px;
+    overflow: hidden;
+    position: absolute;
+    border: 1px solid #69ac1d;
+    box-shadow: 5px 5px 5px rgba(3,3,3,.2);
+}
+div#dictionaryTitle {
+    height: 40px;
+    background: #69ac1d;
+    width: 100%;
+    overflow: hidden;
+}
+#addToList,#removeList {
+    display: none;
+    font-family: 'Open Sans';
+    font-size: 20px;
+    font-weight: bold;
+    float: right;
+    margin-right: 20px;
+    margin-top: 5px;
+    height: 30px;
+    line-height: 30px;
+    background: #fff;
+    padding: 0 10px;
+    border-radius: 4px;
+    box-shadow: 3px 3px 3px rgba(0,0,0,.3);
+}
+
+div#dictionaryContent {
+    background: #fff;
+    height: 300px;
+    overflow-y: auto;
+    padding:0 10px;
+}
+.wordPage {
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    font-family: 'Open Sans';
+    font-size: 16px
+}
+
+.wordPage .section {
+    margin-bottom: 10px;
+}
+
+.wordPage .adslot {
+    margin: 15px auto;
+    text-align: center;
+    max-width: 100%;
+    overflow: hidden;
+    clear: both
+}
+
+.wordPage .main .adslot {
+    display: none
+}
+
+.wordPage:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden
+}
+
+.wordPage .related {display: none;}
+
+.wordPage .blurb {
+    color: #444;
+    overflow: hidden
+}
+
+.wordPage .blurb .long {
+    border-top: 1px solid #ccc;
+    line-height: 150%;
+    font-size: 16px;
+    margin: 5px 0;
+    padding-top: 5px;
+}
+
+.wordPage .blurb .long  i {
+    font-weight:bold;
+}
+.wordPage .blurb .short i:first-of-type {
+    color: #438007;
+    font-style: normal
+}
+
+.wordPage .blurb .short {
+    font-size: 22px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: 300
+}
+
+.wordPage .didyoumean {
+    padding-top: 2em;
+    margin-bottom: -2.5em;
+    font-size: 2em;
+    color: #999;
+    font-weight: 300;
+    font-style: italic
+}
+
+#dictionaryContent .blurb .sidebar {
+    background-color: #eee;
+    border-top: 2px solid #898989;
+    color: #666;
+    float: right;
+    font-size: .85em;
+    margin: 0 0 1em 15px;
+    padding: 10px 12px 12px 12px;
+    width: 40%;
+    font-weight: 300;
+    line-height: 150%
+}
+
+#dictionaryContent .sidebar h3 {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-size: .9em;
+    font-weight: normal
+}
+
+#dictionaryContent .sidebar h3:after {
+    content: ':'
+}
+
+#dictionaryContent .sidebar h4 {
+    border: 0;
+    margin: 0 0 .5em 0;
+    font-size: 1.8em;
+    line-height: 110%
+}
+
+#dictionaryContent .sidebar h4 a {
+    text-decoration: none
+}
+
+#dictionaryContent .sidebar h4 a:hover {
+    text-decoration: underline
+}
+
+#dictionaryContent .sidebar .readMore {
+    white-space: nowrap;
+    display: block;
+    margin-top: .5em;
+    text-align: right
+}
+
+#dictionaryContent .definition .sectionHeader .word {
+    font-weight: 300;
+    font-size: 18px;
+    margin-left: 10px;
+    color: #438007;
+}
+
+#dictionaryContent .definition .sectionHeader {
+    margin-bottom: 10px;
+}
+
+#dictionaryContent h1 {
+    letter-spacing: 0;
+    font-size: 32px;
+    text-transform: none;
+    color: black;
+    font-weight: 300;
+    margin: 10px 0;
+    display: block;
+    width: 100%;
+    display: block;
+    white-space: nowrap
+}
+
+.wordHeader {
+    position: relative;
+    overflow: hidden
+}
+
+.definitionNavigator {
+    margin: 0 0 20px 0;
+    padding: 0;
+    width: 100%;
+    position: relative
+}
+
+.definitionNavigator td {
+    vertical-align: top
+}
+
+.definitionNavigator .groupNumber {
+    color: #282828;
+    line-height: 20px;
+    font-weight: normal;
+    padding: .75em 10px 0 0;
+    font-size: 12px;
+    text-align: center
+}
+
+.definitionNavigator td.posList {
+    padding: 7px 0;
+    width: 1%
+}
+
+.definitionNavigator .def {
+    display: none;
+    font-size: .85em;
+    padding: .5em 5px
+}
+
+.definitionNavigator .def.selected {
+    display: block
+}
+
+.definitionNavigator a {
+    text-decoration: none;
+    padding: 1px 6px 2px 5px;
+    margin: 0 3px 0 0;
+    font-size: 12px;
+    color: white;
+    font-weight: normal;
+    font-style: italic;
+    -ms-filter: "alpha(opacity=30)";
+    filter: alpha(opacity=30);
+    opacity: .3;
+    border-radius: 4px
+}
+
+.definitionNavigator a.selected {
+    color: white;
+    opacity: 1;
+    -ms-filter: "alpha(opacity=100)";
+    filter: alpha(opacity=100)
+}
+
+.definitionNavigator a.pos_n {
+    background-color: #e3412f
+}
+
+.definitionNavigator a.pos_v {
+    background-color: #539007
+}
+
+.definitionNavigator a.pos_a {
+    background-color: #f8b002
+}
+
+.definitionNavigator a.pos_r {
+    background-color: #684b9d
+}
+
+.definitionNavigator a.pos_n.selected {
+    background-color: #e3412f
+}
+
+.definitionNavigator a.pos_v.selected {
+    background-color: #539007
+}
+
+.definitionNavigator a.pos_a.selected {
+    background-color: #f8b002
+}
+
+.definitionNavigator a.pos_r.selected {
+    background-color: #684b9d
+}
+
+a.anchor {
+    text-decoration: none;
+    padding: 0 6px 0 6px;
+    font-size: .75em;
+    color: white;
+    line-height: 21px;
+    font-style: italic;
+    position: absolute;
+    top: .8em;
+    left: 13px;
+    display: block;
+    border-radius: 4px;
+    min-width: 21px;
+    text-align: center
+}
+
+.pos_n a.anchor {
+    background-color: #e3412f
+}
+
+.pos_v a.anchor {
+    background-color: #539007
+}
+
+.pos_a a.anchor {
+    background-color: #f8b002
+}
+
+.pos_r a.anchor {
+    background-color: #684b9d
+}
+
+.wordPage ol.senses .definition {
+    font-weight: bold
+}
+
+.wordPage .example {
+    font-style: italic;
+    color: #666;
+    margin: 1em;
+    font-size: 1.1em;
+    font-weight: 300
+}
+
+.wordPage .example strong {
+    font-weight: normal
+}
+
+.wordPage #wordFamilies {
+    position: relative;
+    z-index: 1;
+    padding: 10px 0
+}
+
+#dictionaryContent .definition h2 {
+    margin: 0;
+    font-size: 16px;
+    padding: 2px 0 10px 0
+}
+
+#dictionaryContent .definition h2 i {
+    color: #22558a
+}
+
+#dictionaryContent .definition h3 {
+    font-size: 1.1em;
+    font-weight: normal;
+    margin: 0;
+    color: #333;
+    margin: 0;
+    padding: .5em 15px .5em 60px;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd
+}
+
+#dictionaryContent .definition .sord1 h3 {
+    border-top: 0
+}
+
+#dictionaryContent .definition h3 .pos, .stackPane h3 .pos {
+    font-style: italic;
+    color: #666
+}
+
+#dictionaryContent .definition .pos .examples {
+    color: #999;
+    border-bottom: 1px dashed #999;
+    padding: 4px 0 4px 0
+}
+
+#dictionaryContent .definition .pos .linkedwords {
+    margin-bottom: 1em;
+    padding: 4px 0 4px 0;
+    border-bottom: 1px solid #999
+}
+
+#dictionaryContent .definition .group {
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border-top: 3px solid #666
+}
+
+#dictionaryContent .definition .ordinal {
+    margin-bottom: 10px;
+    background-color: #f5f5f5;
+    border-top: 1px solid black;
+}
+
+#dictionaryContent .definition .ordinal.first {
+    border-top: 0;
+    margin-top: 1px
+}
+
+#dictionaryContent .definition .group .groupNumber:after {
+    content: '.'
+}
+
+#dictionaryContent .definition .group .groupNumber {
+    position: absolute;
+    color: black;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    font-weight: 300;
+    font-size: 20px;
+    padding: 0;
+    text-align: center;
+    top: -25px;
+    left: 0
+}
+
+#dictionaryContent .definition .sense {
+    clear: left;
+    position: relative;
+    overflow: hidden
+}
+
+.collapsed .defContent {
+    display: none
+}
+
+#dictionaryContent .definition .pos .sense .pointers .pointertype {
+    color: #999
+}
+
+#dictionaryContent .definition .pos .sense .pointers .pointer {
+    margin-left: 10px
+}
+
+#dictionaryContent .definition .pos .sense .pointers .pointer .definition {
+    margin-left: 10px
+}
+
+#dictionaryContent .definition .pos .sense .pointers .pointer .examples {
+    margin-left: 10px
+}
+
+#dictionaryContent .definition .pos .sense .pointers .pointer .linkedwords {
+    margin-left: 10px
+}
+
+#dictionaryContent .definition dd {
+    margin: 1em 0
+}
+
+#dictionaryContent .definition .sense dl dd .definition {
+    font-size: 90%;
+    font-weight: 300;
+    background-image: none;
+    padding: 0 5px 0 0;
+    margin: .25em 0
+}
+
+#dictionaryContent .definition .sense h4 {
+    display: inline;
+    margin: 0;
+    font-size: 90%
+}
+
+#dictionaryContent .definition .sense dl {
+    margin: .5em 0
+}
+
+#dictionaryContent .definition dl {
+    position: relative
+}
+
+#dictionaryContent .definition dd {
+    padding-left: 90px;
+    padding-right: 15px
+}
+
+#dictionaryContent .definition dt {
+    width: 70px;
+    color: #666;
+    font-size: .75em;
+    font-weight: 300;
+    float: left;
+    margin-left: 15px;
+    padding-top: .25em
+}
+
+#dictionaryContent .definition dl.expanded .less {
+    display: block
+}
+
+#dictionaryContent .definition dl.expanded .more {
+    display: none
+}
+
+#dictionaryContent .definition dd.less {
+    display: none
+}
+
+#dictionaryContent .definition dd .expander {
+    font-style: italic;
+    font-size: 90%
+}
+
+#dictionaryContent .definition .similar .word {
+    display: block;
+    padding-left: 10px;
+    height: 60px;
+    width: 100%;
+    line-height: 60px;
+    border-bottom: 1px solid #dcdcdc;
+    box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    position: relative
+}
+
+#dictionaryContent .definition .similar .thumb {
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    width: 100px;
+    height: 59px;
+    position: absolute;
+    top: 0;
+    right: 0
+}
+
+#dictionaryContent a.audio {
+    text-decoration: none !important;
+    color: #999;
+    white-space: nowrap;
+    display: inline;
+    font-size: 18px;
+    padding: 0 0 0 .75em;
+    cursor: pointer;
+    transition: all .3s
+}
+
+#dictionaryContent a.audio:after {
+    font-family: "SSStandard";
+    content: '🔊'
+}
+
+#dictionaryContent a.audio:hover {
+    color: #333
+}
+
+/* Let's get this party started */
+#dictionaryWrapper ::-webkit-scrollbar {
+    width: 4px;
+}
+
+/* Track */
+#dictionaryWrapper ::-webkit-scrollbar-track {
+    display: none;
+}
+
+/* Handle */
+#dictionaryWrapper ::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    background: rgba(0,0,0,0.6);
+    -webkit-box-shadow: inset 0 0 2px rgba(0,0,0,0.4);
+}
+#dictionaryWrapper ::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(0,0,0,0.3);
+}

@@ -1,0 +1,96 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+<head>
+    <title>Getting Started Extension's Popup</title>
+    <style>
+
+    </style>
+    <link rel="stylesheet" media="all" href="main.css">
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+     -->
+    <script src="jquery.js"></script>
+    <script src="popup.js"></script>
+</head>
+<body>
+
+<div id="dictionaryWrapper">
+    <div id="dictionaryTitle">
+        <img src="logo.png" />
+        <a id="addToList">Learning This Word</a>
+        <a id="removeList">Stop Learning It.</a>
+    </div>
+    <div id="dictionaryContent">
+        <div class="wordPage vocab blurbed clearfloat with-header-margin"  data-lang="en" data-word="hyperbole"
+             data-maxfilterlevel="0" data-learnable="true" data-next="hyperbolic" data-prev="hyperactive">
+            <h1 class="dynamictext">hyperbole<a data-audio="H/1MMAQC1GQDHAH" class="audio"></a></h1>
+            <div class="definitionsContainer">
+                <div class="main">
+                    <div class="section blurb">
+                        <p class="short">Praising your favorite sports team is one thing, but if you call the team the most
+                            incredible group of humans ever to walk the earth, then you're going overboard and indulging in
+                            <i>hyperbole</i>.</p>
+                        <p class="long">The <i>hyper-</i> in <i>hyperbole</i> means "beyond," so it's a good sign that the
+                            word has to do with going above and beyond what's necessary. Someone who gets hyperactive about
+                            something and ends up hyperventilating (breathing too hard) might be prone to the exaggerated
+                            style of speaking known as <i>hyperbole</i>. If you find yourself talking about the absolutely
+                            best (or worst) thing of all time, it's time to take it down a notch and cut down on the
+                            hyperbole.</p>
+                    </div>
+                    <div class="definitions">
+                        <div class="section definition">
+                            <div class="sectionHeader">Definitions of <span class="word">hyperbole</span></div>
+                            <!-- BEGIN GROUP -->
+                            <div class="group">
+                                <div class="groupNumber">1</div>
+                                <!-- BEGIN ORDINAL -->
+                                <div class="ordinal first">
+                                    <div class="sense pos_n ord1 sord1" id="s38463">
+                                        <h3 class="definition">
+                                            <a title="noun" name="s38463" class="anchor">n</a>
+                                            extravagant exaggeration
+                                        </h3>
+                                        <div class="defContent">
+                                            <dl class="instances">
+                                                <dt>Synonyms:</dt>
+                                                <dd><a href="/dictionary/exaggeration" class="word">exaggeration</a></dd>
+                                            </dl>
+                                            <dl class="instances">
+                                                <dt>Type of:</dt>
+                                                <dd>
+                                                    <a href="/dictionary/figure" class="word">figure</a>, <a
+                                                        href="/dictionary/figure of speech" class="word">figure of
+                                                    speech</a>, <a href="/dictionary/image" class="word">image</a>, <a
+                                                        href="/dictionary/trope" class="word">trope</a>
+
+                                                    <div class="definition">language used in a figurative or nonliteral
+                                                        sense
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- END ORDINAL -->
+                            </div>
+                            <!-- END GROUP -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
+

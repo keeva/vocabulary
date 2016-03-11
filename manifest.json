@@ -1,0 +1,57 @@
+{
+/*  必填字段*/
+  "manifest_version": 2,
+  "version": "0.1",
+  "name": "Vocabulary",
+
+/*   建议提供的字段*/
+  "description": "This extension get English dictionary definition from Vocabulary.com",
+  "icons": {
+    "128": "icon128.png",
+    "64": "icon64.png",
+    "32":"icon32.png"
+  },
+//  "default_locale": "en",
+
+/*   多选一，或者都不提供*/
+  "browser_action": {
+    "default_icon": "favicon.png",
+    "default_popup": "popup.html"
+  },
+//  "page_action": {...},
+//  "theme": {...},
+//  "app": {...},
+
+
+/*   根据需要提供*/
+  "content_scripts":  [{
+    "matches": ["http://*/*","https://*/*"],
+    "js": ["jquery.js", "content.js"],
+    "css":["main.css"],
+    "all_frames": true
+  }],
+  "permissions": [
+    "http://*/*","https://*/*"
+  ],
+  "web_accessible_resources": ["logo.png"]
+
+  /*"background": {...},
+  "chrome_url_overrides": {...},
+  "content_security_policy": "policyString",
+  "file_browser_handlers": [...],
+  "homepage_url": "http://path/to/homepage",
+  "incognito": "spanning" or "split",
+  "intents": {...}
+  "key": "publicKey",
+  "minimum_chrome_version": "versionString",
+  "nacl_modules": [...],
+  "offline_enabled": true,
+  "omnibox": { "keyword": "aString" },
+  "options_page": "aFile.html",
+  "plugins": [...],
+  "requirements": {...},
+  "update_url": "http://path/to/updateInfo.xml",
+  "web_accessible_resources": [...]*/
+
+
+}
