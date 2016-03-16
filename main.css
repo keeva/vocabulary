@@ -6,15 +6,17 @@ div#dictionaryWrapper {
     width: 500px;
     height: 340px;
     overflow: hidden;
-    position: absolute;
+    position: fixed;
+    z-index:1000001;
     border: 1px solid #69ac1d;
-    box-shadow: 5px 5px 5px rgba(3,3,3,.2);
+    box-shadow: 5px 5px 3px rgba(3,3,3,.2);
 }
 div#dictionaryTitle {
     height: 40px;
     background: #69ac1d;
     width: 100%;
     overflow: hidden;
+    cursor: move;
 }
 #addToList,#removeList {
     display: none;
@@ -174,6 +176,7 @@ div#dictionaryContent {
     color: black;
     font-weight: 300;
     margin: 10px 0;
+    padding: 0;
     display: block;
     width: 100%;
     display: block;
