@@ -49,6 +49,10 @@ div#dictionaryTitle {
     font-size: 16px
 }
 
+#dictionaryWrapper .wordPage .main {
+    width: 100%;
+}
+
 #dictionaryWrapper .wordPage .section {
     margin-bottom: 10px;
 }
