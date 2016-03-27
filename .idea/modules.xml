@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/addon-test.iml" filepath="$PROJECT_DIR$/.idea/addon-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/vocabulary.iml" filepath="$PROJECT_DIR$/.idea/vocabulary.iml" />
     </modules>
   </component>
 </project>
