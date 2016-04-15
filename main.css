@@ -110,7 +110,7 @@ div#dictionaryTitle {
 #dictionaryWrapper .wordPage.didyoumean {
     padding-top: 2em;
     margin-bottom: -2.5em;
-    font-size: 2em;
+    font-size: 18px;
     color: #999;
     font-weight: 300;
     font-style: italic
@@ -121,7 +121,7 @@ div#dictionaryTitle {
     border-top: 2px solid #898989;
     color: #666;
     float: right;
-    font-size: .85em;
+    font-size: 16px;
     margin: 0 0 1em 15px;
     padding: 10px 12px 12px 12px;
     width: 40%;
@@ -133,7 +133,7 @@ div#dictionaryTitle {
     border: 0;
     margin: 0;
     padding: 0;
-    font-size: .9em;
+    font-size: 16px;
     font-weight: normal
 }
 
@@ -144,7 +144,7 @@ div#dictionaryTitle {
 #dictionaryContent .sidebar h4 {
     border: 0;
     margin: 0 0 .5em 0;
-    font-size: 1.8em;
+    font-size: 14px;
     line-height: 110%
 }
 
@@ -220,7 +220,7 @@ div#dictionaryTitle {
 
 #dictionaryContent .definitionNavigator .def {
     display: none;
-    font-size: .85em;
+    font-size: 16px;
     padding: .5em 5px
 }
 
@@ -284,7 +284,7 @@ div#dictionaryTitle {
 #dictionaryContent a.anchor {
     text-decoration: none;
     padding: 0 6px 0 6px;
-    font-size: .75em;
+    font-size: 12px;
     color: white;
     line-height: 21px;
     font-style: italic;
@@ -321,7 +321,7 @@ div#dictionaryTitle {
     font-style: italic;
     color: #666;
     margin: 1em;
-    font-size: 1.1em;
+    font-size: 16px;
     font-weight: 300
 }
 
@@ -346,7 +346,7 @@ div#dictionaryTitle {
 }
 
 #dictionaryWrapper #dictionaryContent .definition h3 {
-    font-size: 1.1em;
+    font-size: 16px;
     font-weight: normal;
     margin: 0;
     color: #333;
@@ -458,7 +458,7 @@ div#dictionaryTitle {
 #dictionaryWrapper #dictionaryContent .definition .sense h4 {
     display: inline;
     margin: 0;
-    font-size: 90%
+    font-size: 90%;
 }
 
 #dictionaryWrapper #dictionaryContent .definition .sense dl {
@@ -477,7 +477,7 @@ div#dictionaryTitle {
 #dictionaryWrapper #dictionaryContent .definition dt {
     width: 70px;
     color: #666;
-    font-size: .75em;
+    font-size: 12px;
     font-weight: 300;
     float: left;
     margin-left: 15px;
@@ -498,7 +498,7 @@ div#dictionaryTitle {
 
 #dictionaryWrapper #dictionaryContent .definition dd .expander {
     font-style: italic;
-    font-size: 90%
+    font-size: 90%;
 }
 
 #dictionaryWrapper #dictionaryContent .definition .similar .word {
@@ -538,7 +538,7 @@ div#dictionaryTitle {
 
 #dictionaryWrapper #dictionaryContent a.audio:after {
     font-family: "SSStandard";
-    content: ''
+    content: "🔊"
 }
 
 #dictionaryWrapper #dictionaryContent a.audio:hover {
